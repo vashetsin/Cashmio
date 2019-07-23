@@ -1,0 +1,71 @@
+﻿body, div, p {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainLogo img {
+    max-width: 100%;
+}
+
+#carousel {
+    display: grid;
+    grid-row-gap: 22px;
+    grid-column-gap: 22px;
+    grid-template-columns: 400px;
+}
+
+    #carousel div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        background-color: #4e5f81;
+        color: #a2a6b2;
+        font-size: 14px;
+    }
+
+        #carousel div img {
+            vertical-align: middle;
+        }
+
+@media screen and (min-width: 822px) {
+    #carousel {
+        grid-template-columns: 400px 400px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #carousel {
+        display: block;
+        width: 1200px;
+        height: 120px;
+        overflow: hidden;
+        position: relative;
+    }
+
+        #carousel div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            left: 1200px;
+        }
+
+            #carousel div:first-child {
+                left: 0;
+                z-index: 1;
+            }
+}
